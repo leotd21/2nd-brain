@@ -309,6 +309,18 @@ def main():
     total_transcripts = len(list(Path("data/transcripts").glob("*.json")))
     total_summaries = len(list(Path("data/summaries").glob("*.json")))
     
+    # Step 4: Regenerate catalog
+    console.print("\n[bold cyan]Step 4: Updating catalog...[/]")
+    try:
+        from generate_catalog import load_summaries, generate_catalog
+        summaries = load_summaries()
+        catalog = generate_catalog(summaries)
+        with open("CATALOG.md", "w", encoding="utf-8") as f:
+            f.write(catalog)
+        console.print(f"  [green]✓[/] Catalog updated with {len(summaries)} videos")
+    except Exception as e:
+        console.print(f"  [yellow]Warning: Could not update catalog: {e}[/]")
+    
     console.print("\n" + "=" * 50)
     console.print(Panel.fit(
         f"[bold green]✓ Update Complete![/]\n\n"
