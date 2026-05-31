@@ -2,25 +2,55 @@
 
 A personal healthcare knowledge system built by crawling, summarizing, and organizing content from trusted Vietnamese medical sources, starting with [Dr. Trần Văn Phúc's YouTube channel](https://www.youtube.com/@BacsiTranVanPhucOfficial).
 
-## 🎯 Purpose
+## 📊 Current Stats
 
-Build a searchable, AI-powered personal health knowledge base that:
-- Aggregates health information from trusted Vietnamese medical professionals
-- Provides quick answers to health questions with source citations
-- Organizes medical knowledge by topics for easy browsing
+| Content | Count |
+|---------|-------|
+| Videos processed | 110 |
+| Total duration | 250+ hours |
+| Key points extracted | 1,046 |
+| Health conditions indexed | 471 |
+
+## 🚀 Quick Start
+
+```bash
+# Activate environment
+.\venv\Scripts\activate
+
+# Chat with your knowledge base
+python chat.py
+
+# Ask a single question
+python chat.py "Vitamin B12 có tác dụng gì?"
+```
+
+## 📖 Documentation
+
+- **[User Guide](docs/USER_GUIDE.md)** - Complete usage instructions
+- **[Technical Spec](docs/TECHNICAL_SPEC.md)** - Architecture and implementation details
+
+## 🔄 Keep Updated
+
+```bash
+# Check for new videos and process them
+python update.py
+
+# Rebuild search index
+python build_index.py
+```
 
 ## 🏗️ Architecture
 
 ```
 ┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  YouTube API /  │────▶│  Transcript  │────▶│   LLM Summary   │
-│  yt-dlp crawler │     │  Extraction  │     │   & Structuring │
+│  YouTube        │────▶│  Transcript  │────▶│   LLM Summary   │
+│  yt-dlp crawler │     │  Extraction  │     │   (9router)     │
 └─────────────────┘     └──────────────┘     └─────────────────┘
                                                       │
                                                       ▼
 ┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
-│   Chat/Query    │◀────│   RAG with   │◀────│  Vector DB +    │
-│   Interface     │     │   LLM        │     │  Markdown Wiki  │
+│   Chat/Query    │◀────│   RAG with   │◀────│  ChromaDB +     │
+│   Interface     │     │   LLM        │     │  Embeddings     │
 └─────────────────┘     └──────────────┘     └─────────────────┘
 ```
 
@@ -28,36 +58,24 @@ Build a searchable, AI-powered personal health knowledge base that:
 
 ```
 2nd-brain/
-├── src/
-│   ├── crawler/          # YouTube content extraction
-│   ├── processor/        # LLM summarization & categorization
-│   ├── storage/          # Vector DB & file management
-│   └── app/              # RAG engine & chat interface
-├── knowledge_base/       # Markdown wiki (Obsidian-compatible)
-├── data/                 # Raw data & embeddings
-├── config/               # Configuration files
-├── tests/                # Test files
-└── docs/                 # Documentation & specs
+├── chat.py               # 💬 Main chat interface
+├── update.py             # 🔄 Update with new videos
+├── build_index.py        # 🔍 Build search index
+├── data/
+│   ├── transcripts/      # Raw Vietnamese transcripts
+│   ├── summaries/        # LLM-generated summaries
+│   └── chroma/           # Vector search database
+├── knowledge_base/       # Obsidian-compatible wiki
+└── docs/                 # Documentation
 ```
 
-## 🚀 Quick Start
+## 💡 Example Questions
 
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
-
-# 2. Configure API keys
-cp config/settings.example.yaml config/settings.yaml
-# Edit settings.yaml with your API keys
-
-# 3. Crawl channel content
-python -m src.crawler.main --channel "@BacsiTranVanPhucOfficial"
-
-# 4. Process and summarize
-python -m src.processor.main
-
-# 5. Start chat interface
-python -m src.app.main
+```
+- Lectin là gì và tại sao nó có hại?
+- Làm thế nào để giảm viêm mãn tính?
+- Vitamin B1 có vai trò gì trong cơ thể?
+- Cortisol ảnh hưởng đến sức khỏe như thế nào?
 ```
 
 ## ⚠️ Disclaimer
