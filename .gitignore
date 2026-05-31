@@ -1,0 +1,73 @@
+# Environment and secrets
+.env
+config/settings.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Data files (large, generated)
+data/chroma/
+data/transcripts/
+data/*.db
+data/audio/
+*.mp3
+*.mp4
+*.wav
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+*.egg-info/
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

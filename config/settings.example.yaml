@@ -1,0 +1,159 @@
+# Second Brain - Configuration Template
+# Copy this file to settings.yaml and fill in your values
+
+# =============================================================================
+# API KEYS (Required)
+# =============================================================================
+# Use environment variables for security: ${ENV_VAR_NAME}
+# Or set values directly (not recommended for production)
+
+openai_api_key: ${OPENAI_API_KEY}
+anthropic_api_key: ${ANTHROPIC_API_KEY}
+youtube_api_key: ${YOUTUBE_API_KEY}  # Optional: yt-dlp works without API key
+
+# =============================================================================
+# CRAWLER SETTINGS
+# =============================================================================
+crawler:
+  # YouTube channels to crawl
+  channels:
+    - id: "@BacsiTranVanPhucOfficial"
+      name: "Dr. Trần Văn Phúc"
+      language: "vi"
+      
+  # Crawling limits
+  max_videos_per_run: 50          # Max videos to process per run
+  check_interval_hours: 24         # How often to check for new videos
+  download_audio: false            # Download audio for Whisper (if no captions)
+  
+  # Rate limiting
+  request_delay_seconds: 2         # Delay between API requests
+
+# =============================================================================
+# PROCESSOR SETTINGS
+# =============================================================================
+processor:
+  # LLM Configuration
+  llm_provider: "openai"           # Options: "openai", "anthropic", "ollama"
+  llm_model: "gpt-4o-mini"         # Model to use for summarization
+  
+  # For local LLM (Ollama)
+  ollama_base_url: "http://localhost:11434"
+  ollama_model: "llama3"
+  
+  # Text chunking
+  chunk_size: 2000                 # Characters per chunk
+  chunk_overlap: 200               # Overlap between chunks
+  
+  # Summarization
+  summary_max_tokens: 1000         # Max tokens for summary
+  extract_timestamps: true         # Extract topic timestamps
+  
+  # Batch processing
+  batch_size: 5                    # Videos to process in parallel
+  max_retries: 3                   # Retries on failure
+
+# =============================================================================
+# STORAGE SETTINGS
+# =============================================================================
+storage:
+  # Paths (relative to project root)
+  data_dir: "./data"
+  vector_db_path: "./data/chroma"
+  wiki_path: "./knowledge_base"
+  sqlite_path: "./data/metadata.db"
+  transcripts_path: "./data/transcripts"
+  
+  # Backup
+  backup_enabled: true
+  backup_interval_days: 7
+
+# =============================================================================
+# EMBEDDING SETTINGS
+# =============================================================================
+embeddings:
+  # Model for generating embeddings (must support Vietnamese)
+  model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  
+  # Alternative models:
+  # - "intfloat/multilingual-e5-large" (better quality, slower)
+  # - "BAAI/bge-m3" (state-of-the-art multilingual)
+  
+  # Embedding dimensions (auto-detected from model)
+  # dimensions: 384
+
+# =============================================================================
+# RAG SETTINGS
+# =============================================================================
+rag:
+  # Retrieval settings
+  top_k: 5                         # Number of chunks to retrieve
+  similarity_threshold: 0.7        # Minimum similarity score
+  
+  # Search strategy
+  search_type: "hybrid"            # Options: "similarity", "mmr", "hybrid"
+  
+  # Response generation
+  response_max_tokens: 500
+  include_sources: true
+  language: "vi"                   # Response language
+
+# =============================================================================
+# UI SETTINGS
+# =============================================================================
+ui:
+  # Interface type
+  type: "cli"                      # Options: "cli", "gradio", "streamlit"
+  
+  # Gradio settings (if type: "gradio")
+  gradio_port: 7860
+  gradio_share: false
+  
+  # Theme
+  theme: "default"
+
+# =============================================================================
+# LOGGING SETTINGS
+# =============================================================================
+logging:
+  level: "INFO"                    # Options: DEBUG, INFO, WARNING, ERROR
+  file: "./logs/app.log"
+  max_size_mb: 10
+  backup_count: 5
+
+# =============================================================================
+# HEALTH TOPICS TAXONOMY
+# =============================================================================
+topics:
+  nutrition:
+    - diet
+    - vitamins
+    - supplements
+    - food
+    - weight
+  diseases:
+    - symptoms
+    - diagnosis
+    - treatment
+    - chronic
+  lifestyle:
+    - exercise
+    - sleep
+    - stress
+    - habits
+  medications:
+    - drugs
+    - side-effects
+    - interactions
+  mental_health:
+    - anxiety
+    - depression
+    - psychology
+  prevention:
+    - screening
+    - vaccines
+    - checkups
+  emergency:
+    - first-aid
+    - urgent-care
+    - warning-signs
