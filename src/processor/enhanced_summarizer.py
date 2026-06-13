@@ -71,7 +71,6 @@ class EnhancedSummarizer:
         model = model or os.environ.get("NINE_ROUTER_MODEL", "mrdev/kr/claude-opus-4.5")
         self.client = OpenAI(base_url=endpoint, api_key=os.environ.get("NINE_ROUTER_API_KEY", "not-needed"))
         self.model = model
-        self.model = model
         self.chunk_size = chunk_size
         self.max_chunks = max_chunks
     
