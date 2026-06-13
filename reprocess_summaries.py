@@ -219,48 +219,62 @@ def main():
     # ---------------------------------------------------------------------------
     results = []
 
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TaskProgressColumn(),
-        console=console
-    ) as progress:
-        task = progress.add_task("Processing...", total=len(remaining))
+    try:
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            BarColumn(),
+            TaskProgressColumn(),
+            console=console
+        ) as progress:
+            task = progress.add_task("Processing...", total=len(remaining))
 
-        for video_id in remaining:
-            progress.update(task, description=f"[cyan]{video_id}[/]")
+            for video_id in remaining:
+                progress.update(task, description=f"[cyan]{video_id}[/]")
 
-            try:
-                result = process_video(video_id, summarizer, categorizer, output_dir)
-                result["video_id"] = video_id
-                results.append(result)
+                try:
+                    result = process_video(video_id, summarizer, categorizer, output_dir)
+                    result["video_id"] = video_id
+                    results.append(result)
 
-                if result["status"] == "success":
-                    completed.add(video_id)
-                    console.print(
-                        f"  [green]✓[/] {video_id}: "
-                        f"quality={result['quality_score']:.0%}, "
-                        f"coverage={result['coverage']:.0%}, "
-                        f"points={result['key_points']}, "
-                        f"mechanisms={result['mechanisms']}"
-                    )
-                else:
-                    failed[video_id] = result.get("message", "Unknown error")
-                    console.print(f"  [red]✗[/] {video_id}: {failed[video_id]}")
+                    if result["status"] == "success":
+                        completed.add(video_id)
+                        console.print(
+                            f"  [green]✓[/] {video_id}: "
+                            f"quality={result['quality_score']:.0%}, "
+                            f"coverage={result['coverage']:.0%}, "
+                            f"points={result['key_points']}, "
+                            f"mechanisms={result['mechanisms']}"
+                        )
+                    else:
+                        failed[video_id] = result.get("message", "Unknown error")
+                        console.print(f"  [red]✗[/] {video_id}: {failed[video_id]}")
 
-            except Exception as e:
-                failed[video_id] = str(e)
-                console.print(f"  [red]✗[/] {video_id}: {str(e)[:50]}")
-                results.append({"video_id": video_id, "status": "error", "message": str(e)})
+                except Exception as e:
+                    failed[video_id] = str(e)
+                    console.print(f"  [red]✗[/] {video_id}: {str(e)[:50]}")
+                    results.append({"video_id": video_id, "status": "error", "message": str(e)})
 
-            # Save checkpoint after every video
-            checkpoint["completed"] = list(completed)
-            checkpoint["failed"] = failed
-            save_checkpoint(checkpoint)
+                # Save checkpoint after every video
+                checkpoint["completed"] = list(completed)
+                checkpoint["failed"] = failed
+                save_checkpoint(checkpoint)
 
-            progress.advance(task)
-            time.sleep(0.5)  # Rate limiting
+                progress.advance(task)
+                time.sleep(0.5)  # Rate limiting
+
+    except KeyboardInterrupt:
+        # Save final checkpoint state before exiting
+        checkpoint["completed"] = list(completed)
+        checkpoint["failed"] = failed
+        save_checkpoint(checkpoint)
+        remaining_count = len(video_ids) - len(completed) - len(failed)
+        console.print(
+            f"\n[yellow]⚠ Interrupted. {len(completed)} completed, "
+            f"{remaining_count} remaining.[/]\n"
+            "[yellow]Run with --resume to continue.[/]"
+        )
+        return
 
     # ---------------------------------------------------------------------------
     # Summary statistics

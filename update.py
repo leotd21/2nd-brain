@@ -5,6 +5,7 @@ Usage:
     python update.py              # Check for new videos and process them
     python update.py --force      # Re-process all videos
     python update.py --check      # Just check for new videos, don't process
+    python update.py --resume     # Resume interrupted summarization
 """
 
 import argparse
@@ -17,7 +18,6 @@ from datetime import datetime
 from dotenv import load_dotenv
 load_dotenv()
 
-from openai import OpenAI
 from rich.console import Console
 from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
@@ -25,15 +25,37 @@ from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskPr
 from src.crawler.youtube_scraper import YouTubeScraper
 from src.crawler.transcript_extractor import TranscriptExtractor
 from src.processor.categorizer import Categorizer
+from src.processor.enhanced_summarizer import EnhancedSummarizer, save_enhanced_summary
 
 console = Console()
 
 # Configuration
 CHANNEL_ID = "@BacsiTranVanPhucOfficial"
-LOCAL_ENDPOINT = os.environ.get("NINE_ROUTER_ENDPOINT", "https://9router.namnh.org/v1")
-LLM_MODEL = os.environ.get("NINE_ROUTER_MODEL", "mrdev/kr/claude-opus-4.5")
+CHECKPOINT_FILE = Path("data/update_checkpoint.json")
 
-client = OpenAI(base_url=LOCAL_ENDPOINT, api_key=os.environ.get("NINE_ROUTER_API_KEY", "not-needed"))
+
+# ---------------------------------------------------------------------------
+# Checkpoint helpers
+# ---------------------------------------------------------------------------
+
+def load_checkpoint() -> dict | None:
+    if CHECKPOINT_FILE.exists():
+        with open(CHECKPOINT_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return None
+
+
+def save_checkpoint(checkpoint: dict):
+    CHECKPOINT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    checkpoint["updated_at"] = datetime.now().isoformat()
+    with open(CHECKPOINT_FILE, "w", encoding="utf-8") as f:
+        json.dump(checkpoint, f, ensure_ascii=False, indent=2)
+
+
+def clear_checkpoint():
+    if CHECKPOINT_FILE.exists():
+        CHECKPOINT_FILE.unlink()
+        console.print("[dim]Checkpoint cleared.[/]")
 
 
 def crawl_new_videos():
@@ -102,166 +124,92 @@ def extract_transcripts(videos):
     return extracted
 
 
-def summarize_video(transcript: str, title: str) -> dict:
-    """Generate summary using local LLM."""
-    max_chars = 12000
-    if len(transcript) > max_chars:
-        transcript = transcript[:max_chars] + "... [truncated]"
-    
-    prompt = f"""Bạn là trợ lý y tế chuyên tóm tắt video sức khỏe tiếng Việt.
-
-**Tiêu đề video:** {title}
-
-**Transcript:**
-{transcript}
-
-**Yêu cầu:** Trả về JSON với cấu trúc:
-{{
-    "main_topics": ["3-5 chủ đề chính"],
-    "summary": "Tóm tắt 200-300 từ",
-    "key_points": ["5-10 điểm quan trọng"],
-    "health_advice": ["lời khuyên sức khỏe"],
-    "warnings": ["cảnh báo nếu có"],
-    "related_conditions": ["bệnh lý liên quan"]
-}}
-
-Giữ nguyên tiếng Việt. Chỉ trả về JSON."""
-
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": "Return only valid JSON."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.3,
-        max_tokens=2000,
-    )
-    
-    content = response.choices[0].message.content
-    
-    # Extract JSON
-    if "```json" in content:
-        content = content.split("```json")[1].split("```")[0]
-    elif "```" in content:
-        content = content.split("```")[1].split("```")[0]
-    
-    return json.loads(content.strip())
-
-
-def process_new_summaries(video_ids):
-    """Generate summaries for new videos."""
+def process_new_summaries(video_ids, checkpoint: dict, completed: set, failed: dict):
+    """Generate summaries for new videos using enhanced summarizer with checkpoint support."""
     if not video_ids:
         return
-    
+
     console.print(f"\n[bold cyan]Step 3: Generating {len(video_ids)} summaries...[/]")
-    
+
     # Load metadata
     with open("data/metadata/dr-tran-van-phuc.json", "r", encoding="utf-8") as f:
         metadata = {v["id"]: v for v in json.load(f).get("videos", [])}
-    
+
+    summarizer = EnhancedSummarizer()
     categorizer = Categorizer()
     summaries_dir = Path("data/summaries")
     summaries_dir.mkdir(exist_ok=True)
-    
+
+    remaining = [v for v in video_ids if v not in completed and v not in failed]
+    console.print(f"  [cyan]Remaining: {len(remaining)} (completed: {len(completed)}, failed: {len(failed)})[/]")
+
     success = 0
-    
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TaskProgressColumn(),
-        console=console
-    ) as progress:
-        task = progress.add_task("Summarizing...", total=len(video_ids))
-        
-        for video_id in video_ids:
-            meta = metadata.get(video_id, {})
-            title = meta.get("title", video_id)
-            
-            progress.update(task, description=f"[cyan]{title[:30]}...[/]")
-            
-            try:
-                # Load transcript
-                with open(f"data/transcripts/{video_id}.json", "r", encoding="utf-8") as f:
-                    transcript_data = json.load(f)
-                
-                # Summarize
-                summary = summarize_video(transcript_data.get("full_text", ""), title)
-                
-                # Categorize
-                text = summary.get("summary", "") + " ".join(summary.get("key_points", []))
-                categories = categorizer.categorize(text, title=title)
-                
-                # Save
-                full_summary = {
-                    "video_id": video_id,
-                    "title": title,
-                    "source_url": meta.get("url", f"https://youtube.com/watch?v={video_id}"),
-                    "categories": categories,
-                    "processed_at": datetime.now().isoformat(),
-                    **summary
-                }
-                
-                with open(summaries_dir / f"{video_id}.json", "w", encoding="utf-8") as f:
-                    json.dump(full_summary, f, ensure_ascii=False, indent=2)
-                
-                # Also save markdown
-                save_markdown(full_summary, summaries_dir / f"{video_id}.md")
-                
-                success += 1
-                
-            except Exception as e:
-                console.print(f"  [red]Error {video_id}: {str(e)[:40]}[/]")
-            
-            progress.advance(task)
-            time.sleep(0.5)
-    
+
+    try:
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            BarColumn(),
+            TaskProgressColumn(),
+            console=console
+        ) as progress:
+            task = progress.add_task("Summarizing...", total=len(remaining))
+
+            for video_id in remaining:
+                meta = metadata.get(video_id, {})
+                title = meta.get("title", video_id)
+
+                progress.update(task, description=f"[cyan]{title[:30]}...[/]")
+
+                try:
+                    with open(f"data/transcripts/{video_id}.json", "r", encoding="utf-8") as f:
+                        transcript_data = json.load(f)
+
+                    full_text = transcript_data.get("full_text", "")
+
+                    summary = summarizer.summarize(full_text, title, video_id)
+                    summary["source_url"] = meta.get("url", summary.get("source_url", f"https://youtube.com/watch?v={video_id}"))
+
+                    text_for_cat = summary.get("summary", "") + " " + " ".join(summary.get("key_points", []))
+                    summary["categories"] = categorizer.categorize(text_for_cat, title=title)
+
+                    save_enhanced_summary(summary, summaries_dir)
+
+                    completed.add(video_id)
+                    success += 1
+
+                except Exception as e:
+                    failed[video_id] = str(e)
+                    console.print(f"  [red]Error {video_id}: {str(e)[:40]}[/]")
+
+                # Save checkpoint after every video
+                checkpoint["completed"] = list(completed)
+                checkpoint["failed"] = failed
+                save_checkpoint(checkpoint)
+
+                progress.advance(task)
+                time.sleep(0.5)
+
+    except KeyboardInterrupt:
+        checkpoint["completed"] = list(completed)
+        checkpoint["failed"] = failed
+        save_checkpoint(checkpoint)
+        remaining_count = len(video_ids) - len(completed) - len(failed)
+        console.print(
+            f"\n[yellow]⚠ Interrupted. {len(completed)} completed, "
+            f"{remaining_count} remaining.[/]\n"
+            "[yellow]Run with --resume to continue.[/]"
+        )
+        raise  # Re-raise so main() can exit cleanly
+
     console.print(f"  [green]Summarized: {success} videos[/]")
-
-
-def save_markdown(s: dict, path: Path):
-    """Save summary as markdown."""
-    lines = [
-        "---",
-        f'title: "{s.get("title", "")}"',
-        f'video_id: {s.get("video_id", "")}',
-        f'source: {s.get("source_url", "")}',
-        f'tags: [{", ".join(s.get("categories", []))}]',
-        "---",
-        "",
-        f'# {s.get("title", "")}',
-        "",
-        f'**Nguồn**: [{s.get("source_url", "")}]({s.get("source_url", "")})',
-        "",
-    ]
-    
-    if s.get("main_topics"):
-        lines.extend(["## Chủ đề", ", ".join(f"[[{t}]]" for t in s["main_topics"]), ""])
-    if s.get("summary"):
-        lines.extend(["## Tóm tắt", s["summary"], ""])
-    if s.get("key_points"):
-        lines.append("## Điểm quan trọng")
-        lines.extend([f"- {p}" for p in s["key_points"]])
-        lines.append("")
-    if s.get("health_advice"):
-        lines.append("## Lời khuyên")
-        lines.extend([f"- {a}" for a in s["health_advice"]])
-        lines.append("")
-    if s.get("warnings"):
-        lines.append("## ⚠️ Cảnh báo")
-        lines.extend([f"- {w}" for w in s["warnings"]])
-        lines.append("")
-    if s.get("related_conditions"):
-        lines.extend(["## Bệnh lý liên quan", ", ".join(f"[[{c}]]" for c in s["related_conditions"]), ""])
-    
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
 
 
 def main():
     parser = argparse.ArgumentParser(description="Update Second Brain with new videos")
     parser.add_argument("--check", action="store_true", help="Only check for new videos")
     parser.add_argument("--force", action="store_true", help="Re-process all videos")
+    parser.add_argument("--resume", action="store_true", help="Resume interrupted summarization")
     args = parser.parse_args()
     
     console.print(Panel.fit(
@@ -269,7 +217,34 @@ def main():
         f"Channel: {CHANNEL_ID}",
         title="Checking for Updates"
     ))
-    
+
+    # ---------------------------------------------------------------------------
+    # Resume path: skip crawl/extract, go straight to summarization
+    # ---------------------------------------------------------------------------
+    checkpoint = load_checkpoint()
+    if checkpoint and (args.resume or _prompt_resume(checkpoint)):
+        to_summarize = checkpoint["video_ids"]
+        completed = set(checkpoint.get("completed", []))
+        failed = checkpoint.get("failed", {})
+        console.print(
+            f"\n[yellow]Resuming checkpoint:[/] "
+            f"{len(completed)}/{len(to_summarize)} done, "
+            f"{len(to_summarize) - len(completed) - len(failed)} remaining"
+        )
+        try:
+            process_new_summaries(to_summarize, checkpoint, completed, failed)
+        except KeyboardInterrupt:
+            return
+        _finish(checkpoint, to_summarize, completed, failed)
+        return
+
+    # Clear stale checkpoint when starting fresh
+    if checkpoint:
+        clear_checkpoint()
+
+    # ---------------------------------------------------------------------------
+    # Normal path
+    # ---------------------------------------------------------------------------
     # Step 1: Check for new videos
     new_videos, all_videos = crawl_new_videos()
     
@@ -290,7 +265,6 @@ def main():
     
     # Step 2: Extract transcripts
     if args.force:
-        # Re-extract all
         video_ids = [v.id for v in all_videos]
         console.print(f"\n[yellow]Force mode: re-processing all {len(video_ids)} videos[/]")
     else:
@@ -299,17 +273,30 @@ def main():
     
     # Step 3: Generate summaries
     if args.force:
-        # Get all transcript IDs
         video_ids = [f.stem for f in Path("data/transcripts").glob("*.json")]
     
-    # Find which ones need summaries
     existing_summaries = {f.stem for f in Path("data/summaries").glob("*.json")}
     to_summarize = [vid for vid in video_ids if vid not in existing_summaries or args.force]
     
     if to_summarize:
-        process_new_summaries(to_summarize)
-    
-    # Summary
+        completed: set = set()
+        failed: dict = {}
+        checkpoint = {
+            "created_at": datetime.now().isoformat(),
+            "updated_at": datetime.now().isoformat(),
+            "total": len(to_summarize),
+            "video_ids": to_summarize,
+            "completed": [],
+            "failed": {},
+        }
+        save_checkpoint(checkpoint)
+        try:
+            process_new_summaries(to_summarize, checkpoint, completed, failed)
+        except KeyboardInterrupt:
+            return
+        _finish(checkpoint, to_summarize, completed, failed)
+
+    # Summary stats
     total_transcripts = len(list(Path("data/transcripts").glob("*.json")))
     total_summaries = len(list(Path("data/summaries").glob("*.json")))
     
@@ -333,6 +320,31 @@ def main():
         f"Summaries: {total_summaries}",
         title="Summary"
     ))
+
+
+def _finish(checkpoint: dict, video_ids: list, completed: set, failed: dict):
+    """Clear checkpoint if all done, otherwise remind user to resume."""
+    all_done = len(completed) + len(failed) >= len(video_ids)
+    if all_done:
+        clear_checkpoint()
+    else:
+        remaining = len(video_ids) - len(completed) - len(failed)
+        console.print(
+            f"\n[yellow]⚠ Checkpoint kept — {remaining} videos still pending. "
+            "Run with --resume to continue.[/]"
+        )
+
+
+def _prompt_resume(checkpoint: dict) -> bool:
+    completed = len(checkpoint.get("completed", []))
+    total = checkpoint.get("total", 0)
+    created = checkpoint.get("created_at", "unknown")[:19]
+    console.print(
+        f"\n[yellow]Found checkpoint from {created}: "
+        f"{completed}/{total} completed.[/]"
+    )
+    answer = console.input("Resume? [Y/n]: ").strip().lower()
+    return answer in ("", "y", "yes")
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ config/settings.yaml
 
 # Checkpoint files
 data/reprocess_checkpoint.json
+data/update_checkpoint.json
 
 # Python
 __pycache__/
