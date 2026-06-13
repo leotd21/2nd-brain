@@ -95,6 +95,28 @@ python update.py --force
 python build_index.py --rebuild
 ```
 
+### Enhanced Summarization (Recommended)
+
+The enhanced summarizer provides much higher quality summaries with:
+- Multi-chunk processing (100% transcript coverage vs 10%)
+- Scientific mechanisms and explanations
+- Specific numbers (dosages, percentages, durations)
+- Step-by-step protocols
+- Debunked myths
+- Key quotes from the doctor
+
+```bash
+# Re-process all with enhanced summarizer
+python reprocess_summaries.py --force
+python build_index.py --rebuild
+
+# Process only low-quality summaries (quality < 60%)
+python reprocess_summaries.py --low-quality
+
+# Test on a few videos first
+python reprocess_summaries.py --sample 5
+```
+
 ### Recommended Update Schedule
 
 Run weekly to catch new videos:
@@ -129,6 +151,17 @@ python update.py --force          # Re-process all videos
 ```bash
 python build_index.py             # Update index with new content
 python build_index.py --rebuild   # Rebuild index from scratch
+```
+
+### `reprocess_summaries.py` - Enhanced Summarization
+
+```bash
+python reprocess_summaries.py                    # Process new videos only
+python reprocess_summaries.py --force            # Re-process all videos
+python reprocess_summaries.py --video VIDEO_ID   # Process single video
+python reprocess_summaries.py --sample 5         # Test on 5 random videos
+python reprocess_summaries.py --low-quality      # Re-process low quality (<60%)
+python reprocess_summaries.py --threshold 0.7    # Custom quality threshold
 ```
 
 ### `process_all.py` - Batch Processing
@@ -253,6 +286,16 @@ Current knowledge base:
 - **1,046 key points** extracted
 - **471 health conditions** indexed
 - **328 searchable documents**
+
+### Enhanced Summary Quality Metrics
+
+After running `reprocess_summaries.py`:
+- **Quality Score**: 0-100% (based on completeness)
+- **Coverage**: % of transcript processed (100% with enhanced)
+- **Key Points**: 8-12 specific, actionable items
+- **Mechanisms**: Scientific explanations included
+- **Specific Numbers**: Dosages, percentages, durations
+- **Protocols**: Step-by-step guides when applicable
 
 ---
 

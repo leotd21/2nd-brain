@@ -3,11 +3,15 @@ Process all video transcripts using local 9router LLM.
 """
 
 import json
+import os
 import time
 import sys
 from pathlib import Path
 from datetime import datetime
 from openai import OpenAI
+
+from dotenv import load_dotenv
+load_dotenv()
 
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
@@ -16,10 +20,10 @@ from rich.panel import Panel
 console = Console()
 
 # Configure for local 9router
-LOCAL_ENDPOINT = "http://localhost:20128/v1"
-MODEL = "kr/claude-opus-4.5"  # Using Claude Opus 4.5
+LOCAL_ENDPOINT = os.environ.get("NINE_ROUTER_ENDPOINT", "https://9router.namnh.org/v1")
+MODEL = os.environ.get("NINE_ROUTER_MODEL", "mrdev/kr/claude-opus-4.5")
 
-client = OpenAI(base_url=LOCAL_ENDPOINT, api_key="not-needed")
+client = OpenAI(base_url=LOCAL_ENDPOINT, api_key=os.environ.get("NINE_ROUTER_API_KEY", "not-needed"))
 
 
 def load_metadata():

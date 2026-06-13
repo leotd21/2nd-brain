@@ -61,18 +61,20 @@ def load_summaries():
 
 
 def create_documents(summary: dict) -> list:
-    """Create searchable documents from a summary."""
+    """Create searchable documents from a summary (enhanced version)."""
     video_id = summary.get("video_id", "")
     title = summary.get("title", "")
     url = summary.get("source_url", "")
     categories = summary.get("categories", [])
+    quality = summary.get("quality_score", 0.5)
     
     documents = []
     
-    # Document 1: Full summary
+    # Document 1: Full summary (use detailed if available)
+    detailed = summary.get("detailed_summary", "") or summary.get("summary", "")
     summary_text = f"""Tiêu đề: {title}
 
-Tóm tắt: {summary.get('summary', '')}
+Tóm tắt: {detailed}
 
 Chủ đề: {', '.join(summary.get('main_topics', []))}
 
@@ -88,12 +90,13 @@ Chủ đề: {', '.join(summary.get('main_topics', []))}
             "title": title,
             "url": url,
             "type": "summary",
-            "categories": ", ".join(categories)
+            "categories": ", ".join(categories),
+            "quality": str(quality)
         }
     })
     
-    # Document 2: Health advice
-    if summary.get("health_advice"):
+    # Document 2: Health advice + warnings
+    if summary.get("health_advice") or summary.get("warnings"):
         advice_text = f"""Tiêu đề: {title}
 
 Lời khuyên sức khỏe:
@@ -130,6 +133,50 @@ Tóm tắt: {summary.get('summary', '')[:500]}
                 "title": title,
                 "url": url,
                 "type": "conditions",
+                "categories": ", ".join(categories)
+            }
+        })
+    
+    # Document 4: Scientific mechanisms (NEW - for enhanced summaries)
+    if summary.get("mechanisms"):
+        mechanisms_text = f"""Tiêu đề: {title}
+
+Cơ chế khoa học:
+{chr(10).join('- ' + m for m in summary.get('mechanisms', []))}
+
+Con số cụ thể:
+{chr(10).join('- ' + n for n in summary.get('specific_numbers', []))}
+"""
+        documents.append({
+            "id": f"{video_id}_mechanisms",
+            "text": mechanisms_text,
+            "metadata": {
+                "video_id": video_id,
+                "title": title,
+                "url": url,
+                "type": "mechanisms",
+                "categories": ", ".join(categories)
+            }
+        })
+    
+    # Document 5: Protocols and myths (NEW - for enhanced summaries)
+    if summary.get("protocols") or summary.get("myths_debunked"):
+        protocols_text = f"""Tiêu đề: {title}
+
+Phác đồ/Quy trình:
+{chr(10).join('- ' + p for p in summary.get('protocols', []))}
+
+Quan niệm sai được bác bỏ:
+{chr(10).join('- ' + m for m in summary.get('myths_debunked', []))}
+"""
+        documents.append({
+            "id": f"{video_id}_protocols",
+            "text": protocols_text,
+            "metadata": {
+                "video_id": video_id,
+                "title": title,
+                "url": url,
+                "type": "protocols",
                 "categories": ", ".join(categories)
             }
         })

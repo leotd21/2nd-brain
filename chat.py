@@ -9,7 +9,11 @@ Usage:
 
 import argparse
 import json
+import os
 from pathlib import Path
+
+from dotenv import load_dotenv
+load_dotenv()
 
 import chromadb
 from chromadb.utils import embedding_functions
@@ -24,11 +28,11 @@ console = Console()
 CHROMA_PATH = "./data/chroma"
 COLLECTION_NAME = "health_knowledge"
 EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-LOCAL_ENDPOINT = "http://localhost:20128/v1"
-LLM_MODEL = "kr/claude-opus-4.5"
+LOCAL_ENDPOINT = os.environ.get("NINE_ROUTER_ENDPOINT", "https://9router.namnh.org/v1")
+LLM_MODEL = os.environ.get("NINE_ROUTER_MODEL", "mrdev/kr/claude-opus-4.5")
 
 # Initialize clients
-llm_client = OpenAI(base_url=LOCAL_ENDPOINT, api_key="not-needed")
+llm_client = OpenAI(base_url=LOCAL_ENDPOINT, api_key=os.environ.get("NINE_ROUTER_API_KEY", "not-needed"))
 
 
 def get_collection():

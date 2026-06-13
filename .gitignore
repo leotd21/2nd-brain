@@ -2,6 +2,9 @@
 .env
 config/settings.yaml
 
+# Checkpoint files
+data/reprocess_checkpoint.json
+
 # Python
 __pycache__/
 *.py[cod]
