@@ -1,24 +1,99 @@
 {
+  "main_topics": [
+    "Cơ chế bệnh tiểu đường và vai trò của insulin",
+    "Biến chứng nguy hiểm của tiểu đường",
+    "Chế độ ăn uống dựa trên chỉ số đường huyết (GI)",
+    "Lịch sử phát hiện và điều trị insulin",
+    "Phương pháp điều trị và phẫu thuật tiểu đường"
+  ],
+  "summary": "Tiểu đường là đại dịch thầm lặng với cứ 15 người có 2 người mắc bệnh, 63% chưa được chẩn đoán. Insulin hoạt động như 'xe ôm công nghệ' vận chuyển đường từ máu đến 75.000 tỷ tế bào. Khi tế bào kháng insulin, đường dư chuyển đến gan thành mỡ, gây gan nhiễm mỡ và máu nhiễm mỡ. Bệnh có hơn 100 biến chứng: mù lòa, hoại tử chi, nhồi máu cơ tim, suy thận. Trước 1922, mắc tiểu đường là án tử - Frederick Banting đã mổ 92 con chó để chiết xuất insulin cứu sống cậu bé Leonard Thomson 14 tuổi. Điều trị phải cá thể hóa, không hạ đường huyết cực đoan vì tăng nguy cơ đột quỵ. Kiểm soát GI thực phẩm: dưới 55 an toàn, trên 70 nguy hiểm. Một lần mắc bệnh, cả đời điều trị.",
+  "detailed_summary": "Tiểu đường đang trở thành đại dịch toàn cầu với thống kê đáng báo động: cứ 15 người có 2 người mắc bệnh, 10 người có 2 người tiền tiểu đường, và 63% người bệnh chưa được chẩn đoán. Liên Hợp Quốc chọn ngày 14/11 là Ngày Tiểu đường Thế giới - chỉ có 2 bệnh được vinh dự này: AIDS và tiểu đường.\n\nCơ chế bệnh: Cơ thể có 75.000 tỷ tế bào cần đường để sống. Insulin từ tuyến tụy hoạt động như 'xe ôm công nghệ' vận chuyển đường từ máu đến tế bào. Khi ăn, trong 3 tiếng dạ dày biến thức ăn thành đường đi vào máu. Khi tế bào từ chối nhận đường (kháng insulin), insulin chuyển đường dư đến gan dự trữ. Gan biến đường thừa thành mỡ gây gan nhiễm mỡ, sau đó đẩy mỡ ra máu gây máu nhiễm mỡ. Khi tế bào không dùng được đường phải chuyển hóa protein và mỡ, tạo thể cetol gây nhiễm toan chuyển hóa nguy hiểm. Đường máu cao tạo mảng xơ vữa trong 86-90 km mạch máu, gây tắc mạch.\n\nLịch sử: Trước 1922, mắc tiểu đường nghĩa là án tử hình. Frederick Banting đã mổ 91 con chó chết trước khi con thứ 92 sống sót để chiết xuất insulin. Năm 1922, cậu bé Leonard Thomson 14 tuổi trở thành người đầu tiên được tiêm insulin và sống thêm 13 năm.\n\nBiến chứng: Bệnh có hơn 100 biến chứng gồm mù lòa, hoại tử chi, nhồi máu cơ tim, tai biến mạch máu não, suy thận. Biến chứng cấp tính nguy hiểm: nhiễm toan cetol, hôn mê tăng áp lực thẩm thấu, hạ đường huyết.\n\nĐiều trị: Phải cá thể hóa theo từng bệnh nhân, không có công thức chung. Uống insulin không tác dụng vì bị enzyme tiêu hóa phá hủy - phải tiêm. Phẫu thuật giảm béo áp dụng cho BMI trên 32,5, tuổi 16-65, tiểu đường tuýp 2 có chức năng tụy còn tốt. Kiểm soát ăn uống qua chỉ số GI: dưới 55 an toàn (mướp đắng 24, dưa chuột 23), trên 70 nguy hiểm (bí ngô 75).",
+  "key_points": [
+    "Cứ 15 người có 2 người mắc tiểu đường, 63% chưa được chẩn đoán",
+    "Insulin hoạt động như xe ôm vận chuyển đường từ máu đến75.000 tỷ tế bào",
+    "Kháng insulin khiến gan biến đường thừa thành mỡ, gây gan nhiễm mỡ và máu nhiễm mỡ",
+    "Tiểu đường có hơn 100 biến chứng, một khi mắc không thể chữa khỏi",
+    "Chỉ số GI dưới 55 an toàn, trên 70 nguy hiểm cho người tiểu đường",
+    "Hạ đường huyết cực đoan làm tăng nguy cơ đột quỵ và nhồi máu cơ tim",
+    "Điều trị phải cá thể hóa, không có công thức chung cho tất cả bệnh nhân",
+    "Uống insulin không tác dụng vì bị enzyme tiêu hóa phá hủy, phải tiêm",
+    "Phẫu thuật giảm béo áp dụng cho BMI trên 32,5, tuổi 16-65",
+    "Rượu bia phá hủy tuyến tụy dẫn đến tiểu đường"
+  ],
+  "health_advice": [
+    "Tra Google chỉ số GI của món ăn trước khi ăn - chọn thực phẩm GI dưới 55",
+    "Trao đổi với bác sĩ điều trị và bác sĩ dinh dưỡng để xây dựng chế độ ăn riêng",
+    "Giữ mồm giữ miệng, không ăn ngày ăn đêm liên tục",
+    "Người béo phì BMI trên 32,5 nên cân nhắc phẫu thuật giảm cân tại cơ sở ngoại khoa lớn",
+    "Không tự ý hạ đường huyết xuống quá thấp - nguy cơ biến chứng tim mạch",
+    "Xây dựng chế độ ăn dựa vào văn hóa, sở thích và thể trạng cá nhân",
+    "Hạn chế rượu bia để bảo vệ tuyến tụy"
+  ],
+  "warnings": [
+    "Một khi mắc tiểu đường không thể chữa khỏi, chỉ khống chế được - cả đời điều trị",
+    "Hạ đường huyết cực đoan làm tăng tỷ lệ tai biến mạch máu não và nhồi máu cơ tim",
+    "Biến chứng nguy hiểm: mù lòa, hoại tử chi phải cắt cụt, nhồi máu cơ tim, suy thận",
+    "Biến chứng cấp tính có thể tử vong: nhiễm toan cetol, hôn mê tăng áp lực thẩm thấu",
+    "63% người mắc tiểu đường chưa được chẩn đoán - bệnh tiến triển âm thầm",
+    "Phẫu thuật chỉ áp dụng cho tiểu đường tuýp 2 có chức năng tụy còn tốt"
+  ],
+  "related_conditions": [
+    "Tiểu đường tuýp 1 (di truyền,ẻ em)",
+    "Tiểu đường tuýp 2 (mắc phải, người lớn)",
+    "Tiền tiểu đường",
+    "Tiểu đường thai kỳ",
+    "Gan nhiễm mỡ",
+    "Máu nhiễm mỡ",
+    "Nhiễm toan cetol",
+    "Nhồi máu cơ tim",
+    "Tai biến mạch máu não",
+    "Hôn mê tăng áp lực thẩm thấu"
+  ],
+  "mechanisms": [
+    "Insulin như xe ôm công nghệ: vận chuyển đường từ máu đến tế bào, khi tế bào từ chối thì chuyển đường dư đến gan dự trữ",
+    "Quá trình tiêu hóa: trong 3 tiếng dạ dày và ruột biến thức ăn thành đường đi vào máu",
+    "Hình thành gan nhiễm mỡ: gan biến đường thừa thành mỡ, sau đó đẩy mỡ ra máu gây máu nhiễm mỡ",
+    "Nhiễm toan chuyển hóa: khi tế bào không dùng được đường, chuyển hóa protein và mỡ tạo thể cetol (axit)",
+    "Xơ vữa động mạch: đường máu cao tạo mảng xơ vữa trong 86-90 km mạch máu gây tắc mạch"
+  ],
+  "specific_numbers": [
+    "Tỷ lệ mắc: 2/15 người tiểu đường, 2/10 người tiền tiểu đường",
+    "63% người mắc chưa được chẩn đoán",
+    "Hơn 100 biến chứng khác nhau",
+    "75.000 tỷ tế bào cần đường để sống",
+    "86-90 km mạch máu trong cơ thể",
+    "GI mướp đắng: 24, dưa chuột: 23, bí ngô: 75",
+    "GI an toàn: dưới 55, trung bình: 56-69, nguy hiểm: trên 70",
+    "Tiêu chuẩn phẫu thuật: BMI trên 32,5, tuổi 16-65",
+    "BMI trên 25: béo phì",
+    "Leonard Thomson sống thêm 13 năm sau khi tiêm insulin năm 14 tuổi"
+  ],
+  "protocols": [
+    "Kiểm soát ăn uống theo chỉ số GI:ọn thực phẩm GI dưới 55, tránh GI trên 70",
+    "Tiêu chuẩn phẫu thuật giảm béo: BMI trên 32,5, tuổi 16-65, tiểu đường tuýp 2, chức năng tụy còn tốt, thực hiện tại cơ sở ngoại khoa lớn",
+    "Điều trị cá thể hóa: phối hợp bác sĩ điều trị và bác sĩ dinh dưỡng xây dựng chế độ riêng theo văn hóa, sở thích, thể trạng"
+  ],
+  "myths_debunked": [
+    "SAI: Tiểu đường chỉ là bệnh của người giàu - ĐÚNG: tỷ lệ mắc tương đương ở mọi vùng miền",
+    "SAI: Chỉ người trung niên, người già mới bị tiểu đường",
+    "SAI: Mướp đắng chữa được tiểu đường - ĐÚNG: enzyme tiêu hóa phá hủy các chất giống insulin trong mướp đắng khi ăn vào",
+    "SAI: Hạ đường huyết càng thấp càng tốt - ĐÚNG: có thể tăng nguy cơ biến chứng tim mạch và đột quỵ",
+    "SAI: Tiểu đường dễ hiểu, chỉ cần xét nghiệm đường huyết - ĐÚNG: là căn bệnh rất phức tạp với nhiều yếu tố đan xen"
+  ],
+  "key_quotes": [
+    "Nhất đán đắc bệnh, trung thân trị liệu - Một lần mắc bệnh, cả đời điều trị",
+    "Tiểu đường bản thân nó không nguy hiểm nhưng biến chứng của nó thì quá nguy hiểm",
+    "Khoa học lên được cung trăng, sao Hỏa, sản xuất được tàu vũ trụ nhưng không chinh phục được bệnh tiểu đường"
+  ],
   "video_id": "lgD7-T7TxNQ",
   "title": "Bệnh tiểu đường #BacsiTranVanPhucOfficial",
   "source_url": "https://www.youtube.com/watch?v=lgD7-T7TxNQ",
-  "main_topics": [],
-  "summary": "Tóm tắt không khả dụng",
-  "detailed_summary": "",
-  "key_points": [],
-  "health_advice": [],
-  "warnings": [],
-  "related_conditions": [],
-  "mechanisms": [],
-  "specific_numbers": [],
-  "protocols": [],
-  "myths_debunked": [],
-  "key_quotes": [],
-  "processed_at": "2026-06-01T21:53:23.577629",
+  "processed_at": "2026-06-13T14:55:56.000599",
   "transcript_coverage": 1.0,
-  "quality_score": 0.3,
+  "quality_score": 1.0,
   "categories": [
     "diseases",
-    "nutrition"
+    "nutrition",
+    "emergency"
   ]
 }
