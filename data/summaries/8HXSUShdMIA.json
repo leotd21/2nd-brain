@@ -1,49 +1,102 @@
 {
+  "main_topics": [
+    "Tổng quan về ung thư tuyến giáp và tỷ lệ mắc bệnh",
+    "Phương pháp chẩn đoán ung thư tuyến giáp (siêu âm, phân loại TIRADS, chọc hút kim nhỏ)",
+    "Các thể ung thư tuyến giáp và tiên lượng điều trị",
+    "Lịch trình theo dõi và chỉ định can thiệp",
+    "Phòng ngừa và lối sống giảm nguy cơ mắc bệnh"
+  ],
+  "summary": "Ung thư tuyến giáp đứng thứ 9 về tỷ lệ mắc toàn cầu, dự kiến lên vị trí thứ 4 vào năm 2030. Đây được gọi là 'ung thư hạnh phúc' vì 95% ca bệnh là thể biểu mô tế bào nhú - có thể khỏi hoàn toàn. Phụ nữ chiếm 75% ca bệnh do ảnh hưởng của hormone estrogen và progesterone. Siêu âm là phương pháp chẩn đoán hiệu quả nhất, vượt trội hơn CT và cộng hưởng từ, có thể phát hiện tổn thương dưới 1mm. Phân loại TIRADS giúp quyết định khi nào cần chọc hút kim nhỏ. Điều quan trọng là không phải mọi ung thư tuyến giáp đều cần điều trị ngay - thể nhú dưới 10mm có thể theo dõi. Hiện đang có tình trạng lạm dụng chẩn đoán và phẫu thuật quá mức. Khám sức khỏe định kỳ 1-2 năm/lần giúp phát hiện sớm bệnh.",
+  "detailed_summary": "Ung thư tuyến giáp là loại ung thư phổ biến, đứng thứ 9 toàn cầu với tỷ lệ mắc tăng 20 lần từ năm 2000 đến 2015, dự kiến lên vị trí thứ 4 vào năm 2030. Tuyến giáp là cơ quan nội tiết lớn nhất cơ thể (khoảng 20g), có chức năng điều hòa chuyển hóa: đốt cháy đường, protein, mỡ thành năng lượng, sinh nhiệt và thoát mồ hôi.\n\nPhụ nữ chiếm khoảng 75% ca bệnh do hormone estrogen và progesterone thay đổi theo chu kỳ kinh nguyệt. Độ tuổi trung bình được chẩn đoán là 50 tuổi. Đáng chú ý, đàn ông tuy ít mắc hơn nhưng khi bị thì dễ di căn hạch và di căn xa hơn nữ.\n\nVề phân loại, trên 95% ung thư tuyến giáp là thể biểu mô tế bào nhú - thể an toàn nhất với tỷ lệ khỏi hoàn toàn lên đến 95%. Ngược lại, thể không biệt hóa cực kỳ nặng, thường gặp ở người cao tuổi, chỉ sống được 6-8 tháng. Thể tủy liên quan yếu tố di truyền, người thân trực hệ cần theo dõi 3-6 tháng/lần.\n\nSiêu âm là phương pháp chẩn đoán tốt nhất, vượt trội hơn CT và cộng hưởng từ, có thể phát hiện tổn thương dưới 1mm. Phân loại TIRADS hướng dẫn chỉ định chọc hút: TIRADS 3 chọc khi nhân trên 25mm, TIRADS 4 trên 15mm, TIRADS 5 trên 10mm. Chọc hút kim nhỏ hiệu quả hơn kim lớn nhờ hiện tượng mao dẫn. Xét nghiệm marker ung thư không có giá trị sàng lọc.\n\nVề điều trị, ung thư tuyến giáp thể nhú dưới 10mm có thể theo dõi không cần điều trị ngay, can thiệp khi tăng trên 3mm. Với nhân lành tính cần can thiệp, ưu tiên đốt sóng cao tần trước phẫu thuật. Iốt phóng xạ 131 tiêu diệt tế bào tuyến giáp vì tế bào này cần iốt để phát triển. Phẫu thuật có nguy cơ tổn thương dây thần kinh quặt ngược gây khàn tiếng.\n\nHiện đang có tình trạng lạm dụng chẩn đoán và phẫu thuật tuyến giáp quá mức. Người bác sĩ giỏi là người giúp bệnh nhân sử dụng ít thuốc và mổ ít nhất.",
+  "key_points": [
+    "95% ung thư tuyến giáp là thể biểu mô tế bào nhú - có thể khỏi hoàn toàn",
+    "Siêu âm là phương pháp chẩn đoán tốt nhất, vượt trội hơn CT và cộng hưởng từ",
+    "Phân loại TIRADS quyết định chỉ định chọc hút: TIRADS 3 (>25mm), TIRADS 4 (>15mm), TIRADS 5 (>10mm)",
+    "Ung thư tuyến giáp thể nhú dưới 10mm có thể theo dõi, can thiệp khi tăng trên 3mm",
+    "Xét nghiệm marker ung thư không có giá trị sàng lọc - chỉ siêu âm mới hiệu quả",
+    "Phụ nữ chiếm 75% ca bệnh do ảnh hưởng hormone estrogen và progesterone",
+    "Đàn ông ít mắc nhưng khi bị thì dễ di căn hơn nữ",
+    "BMI tăng 5 đơn vị làm tăng nguy cơ ung thư tuyến giáp 1.44 lần ở nữ, 1.33 lần ở nam",
+    "Thể không biệt hóa cực kỳ nặng, chỉ sống được 6-8 tháng",
+    "Hiện đang có tình trạng lạm dụng chẩn đoán và phẫu thuật tuyến giáp quá mức"
+  ],
+  "health_advice": [
+    "Khám sức khỏe định kỳ 1-2 năm/lần, siêu âm tuyến giáp để phát hiện sớm",
+    "TIRADS 3-5 với kích thước nhỏ: khám 6 tháng/lần",
+    "Duy trì BMI ổn định, tránh tăng cân quá mức",
+    "Tăng cường vận động - người ít vận động dễ bị bệnh tuyến giáp hơn",
+    "Chế độ ăn cân bằng, đủ vi chất (canxi, magie, vitamin)",
+    "Tránh xa rượu, cà phê, thuốc lá",
+    "Không tự sờ tuyến giáp nhiều vì có thể làm tổn thương nặng lên",
+    "Người có thân nhân mắc ung thư tuyến giáp thể tủy cần theo dõi 3-6 tháng/lần"
+  ],
+  "warnings": [
+    "Ung thư tuyến giáp thể tủy có yếu tố di truyền - người thân trực hệ cần theo dõi sát",
+    "Ung thư tuyến giáp thể không biệt hóa cực kỳ nặng, thường gặp ở người cao tuổi",
+    "Đàn ông khi mắc ung thư tuyến giáp dễ di căn hạch và di căn xa hơn nữ",
+    "Nhân tăng sinh mạch máu khi chọc hút có thể cho kết quả âm tính giả do lấy được toàn máu",
+    "Phẫu thuật tuyến giáp có nguy cơ tổn thương dây thần kinh quặt ngược gây khàn tiếng",
+    "Ung thư tuyến giáp là loại ung thư âm thầm không triệu chứng, cùng với ung thư túi mật và buồng trứng"
+  ],
+  "related_conditions": [
+    "Ung thư tuyến giáp thể biểu mô tế bào nhú (95%)",
+    "Ung thư tuyến giáp thể biểu mô dạng nang",
+    "Ung thư tuyến giáp thể tủy",
+    "Ung thư tuyến giáp biểu mô không biệt hóa",
+    "Cường giáp (Basedow)",
+    "Suy giáp",
+    "Viêm giáp Hashimoto",
+    "Nhân tuyến giáp lành tính",
+    "Nang tuyến giáp"
+  ],
+  "mechanisms": [
+    "Tuyến giáp điều hòa chuyển hóa: đốt cháy đường, protein, mỡ thành năng lượng, sinh nhiệt và thoát mồ hôi",
+    "Phụ nữ hay bị bệnh tuyến giáp hơn nam do hormone estrogen và progesterone thay đổi theo chu kỳ kinh nguyệt",
+    "Chọc hút kim nhỏ hiệu quả hơn kim lớn do hiện tượng mao dẫn - đường kính càng nhỏ thì mao dẫn càng lớn",
+    "Iốt phóng xạ 131 tiêu diệt tế bào tuyến giáp vì tế bào này cần iốt để phát triển, khi gắn phóng xạ sẽ bị tiêu diệt",
+    "Nhân tăng sinh mạch máu nhiều phản ánh sự nhân lên tế bào tăng - dấu hiệu ung thư"
+  ],
+  "specific_numbers": [
+    "TIRADS 3: chọc khi nhân >25mm; TIRADS 4: >15mm; TIRADS 5: >10mm",
+    "Theo dõi ung thư tuyến giáp: 6 tháng/lần, can thiệp khi tăng >3mm",
+    "95% ung thư tuyến giáp là thể biểu mô tế bào nhú",
+    "95% bệnh nhân ung thư tuyến giáp có thể khỏi hoàn toàn",
+    "Thể không biệt hóa chỉ sống được 6-8 tháng",
+    "Phụ nữ chiếm 75% ca ung thư tuyến giáp",
+    "Độ tuổi trung bình được chẩn đoán: khoảng 50 tuổi",
+    "BMI tăng 5 đơn vị: nguy cơ tăng 1.44 lần ở nữ, 1.33 lần ở nam",
+    "Tỷ lệ mắc năm 2015 tăng 20 lần so với năm 2000",
+    "Tuyến giáp nặng khoảng 20g"
+  ],
+  "protocols": [
+    "Người bình thường: khám tuyến giáp 1-2 năm/lần",
+    "TIRADS 1-2: khám 1 năm/lần",
+    "TIRADS 3-5 với kích thước nhỏ: khám 6 tháng/lần",
+    "Ung thư tuyến giáp thể nhú <10mm: theo dõi 6 tháng/lần, can thiệp khi tăng >3mm",
+    "Người thân trực hệ bệnh nhân ung thư thể tủy: theo dõi 3-6 tháng/lần",
+    "Nhân lành tính cần can thiệp: ưu tiên đốt sóng cao tần trước khi phẫu thuật"
+  ],
+  "myths_debunked": [
+    "SAI: Xét nghiệm marker ung thư (CA, calcitonin, TG) có thể sàng lọc ung thư tuyến giáp → ĐÚNG: Chỉ siêu âm mới hiệu quả sàng lọc",
+    "SAI: CT và cộng hưởng từ tốt hơn siêu âm trong chẩn đoán tuyến giáp → ĐÚNG: Siêu âm vẫn tốt nhất, CT/MRI bỏ sót tổn thương nhiều",
+    "SAI: Chọc kim lớn lấy được nhiều tế bào hơn kim nhỏ → ĐÚNG: Kim nhỏ hiệu quả hơn do hiện tượng mao dẫn",
+    "SAI: Bắn súng sinh thiết tốt hơn chọc hút kim nhỏ → ĐÚNG: Chọc hút kim nhỏ tương đương hoặc tốt hơn",
+    "SAI: Siêu âm Doppler mạch máu không quan trọng → ĐÚNG: Rất quan trọng trong chẩn đoán ung thư tuyến giáp"
+  ],
+  "key_quotes": [
+    "Nếu cuộc đời ai đó không may mắn phải ung thư thì chúng ta hãy chọn ung thư tuyến giáp",
+    "Người bác sĩ giỏi là người làm thế nào để bệnh nhân phải sử dụng ít thuốc nhất và phải mổ ít nhất",
+    "Chiến tranh qua đi hơn nửa thế kỷ nhưng chúng ta vẫn tạo ra quá nhiều người bị thương - về việc lạm dụng phẫu thuật tuyến giáp"
+  ],
   "video_id": "8HXSUShdMIA",
   "title": "Ung thư tuyến giáp #BacsiTranVanPhucOfficial",
   "source_url": "https://www.youtube.com/watch?v=8HXSUShdMIA",
+  "processed_at": "2026-06-01T05:22:32.002324",
+  "transcript_coverage": 1.0,
+  "quality_score": 1.0,
   "categories": [
     "diseases",
-    "lifestyle",
-    "prevention"
-  ],
-  "processed_at": "2026-05-31T15:35:58.819699",
-  "main_topics": [
-    "Tỷ lệ mắc và xu hướng ung thư tuyến giáp",
-    "Các thể ung thư tuyến giáp và tiên lượng",
-    "Câu chuyện bệnh nhân minh họa",
-    "Tầm quan trọng của phát hiện sớm",
-    "Quan niệm về 'ung thư hạnh phúc'"
-  ],
-  "summary": "Video thảo luận về ung thư tuyến giáp, một bệnh lý đang có tỷ lệ mắc tăng đáng kể trên toàn cầu, đặc biệt ở các nước châu Á. Bác sĩ Trần Văn Phúc nhấn mạnh rằng mặc dù nghe tên 'ung thư' thường gây sợ hãi, nhưng ung thư tuyến giáp được giới chuyên môn coi là 'ung thư hạnh phúc' vì đa phần (trên 95%) tiến triển rất chậm, đặc biệt là thể biểu mô tế bào nhú, và có tiên lượng rất tốt nếu được phát hiện và điều trị đúng cách. Video kể câu chuyện của diễn viên Sofia Vergara, sống khỏe mạnh sau 24 năm điều trị ung thư tuyến giáp giai đoạn muộn, và một trường hợp khác di căn phổi với kết cục không may để minh họa cho hai khả năng tiến triển khác nhau của bệnh. Thông điệp chính là cần nâng cao nhận thức, khám sàng lọc để phát hiện sớm, từ đó có thể kiểm soát bệnh hiệu quả và giảm bớt nỗi sợ hãi không cần thiết.",
-  "key_points": [
-    "Tỷ lệ mắc ung thư tuyến giáp tăng 20 lần từ năm 2000 đến 2015, đặc biệt ở phụ nữ châu Á.",
-    "Ung thư tuyến giáp được mệnh danh là 'ung thư hạnh phúc' vì diễn biến chậm và tiên lượng tốt cho đa số bệnh nhân.",
-    "Thể ung thư biểu mô tế bào nhú chiếm tới 95% các trường hợp, tiến triển rất chậm và có thể chữa khỏi hoàn toàn.",
-    "Khoảng 5% trường hợp thuộc thể nặng, có thể di căn (như đến phổi) và nguy hiểm.",
-    "Phát hiện sớm qua khám sức khỏe định kỳ, siêu âm tuyến giáp là chìa khóa then chốt để điều trị hiệu quả.",
-    "Điều trị có thể bao gồm phẫu thuật, nạo vét hạch và điều trị phóng xạ I-131 tùy giai đoạn.",
-    "Tâm lý sợ hãi là rào cản lớn, cần được giải tỏa bằng thông tin chính xác về bệnh.",
-    "Tuổi trung bình được chẩn đoán là khoảng 50, nhưng bệnh có thể xảy ra ở mọi lứa tuổi.",
-    "Bệnh thường âm thầm, ít triệu chứng rõ ràng cho đến khi có thể đã di căn.",
-    "Y học tiếp tục phát triển các phương pháp chẩn đoán và điều trị ngày càng hiệu quả hơn."
-  ],
-  "health_advice": [
-    "Nên đi khám sức khỏe định kỳ, đặc biệt chú ý kiểm tra tuyến giáp qua siêu âm.",
-    "Khi có chẩn đoán ung thư tuyến giáp, cần bình tĩnh, tìm hiểu kỹ về thể bệnh và tuân thủ phác đồ điều trị của bác sĩ.",
-    "Duy trì tinh thần lạc quan, vì tiên lượng của đa số trường hợp là rất tốt.",
-    "Tìm kiếm thông tin từ các nguồn chính thống, uy tín để hiểu rõ về bệnh, tránh hoang mang."
-  ],
-  "warnings": [
-    "Không được chủ quan: dù tiên lượng chung tốt, vẫn có khoảng 5% trường hợp ung thư tuyến giáp thể nặng, di căn và nguy hiểm.",
-    "Không nên trì hoãn việc thăm khám khi có dấu hiệu bất thường vùng cổ hoặc kết quả sàng lọc nghi ngờ.",
-    "Cần cảnh giác với sự gia tăng đột biến tỷ lệ mắc bệnh trong cộng đồng."
-  ],
-  "related_conditions": [
-    "Bướu giáp đơn thuần (bướu cổ)",
-    "Viêm tuyến giáp",
-    "Cường giáp / Suy giáp",
-    "Các bệnh ung thư đầu cổ khác",
-    "Di căn phổi từ ung thư nguyên phát khác"
+    "prevention",
+    "women_health"
   ]
 }

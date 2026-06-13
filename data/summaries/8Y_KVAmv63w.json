@@ -1,52 +1,93 @@
 {
+  "main_topics": [
+    "Ngộ độc rượu methanol và cơ chế gây độc",
+    "Phân biệt rượu thật và rượu giả",
+    "Cách phòng tránh và xử trí ngộ độc rượu",
+    "Tác hại của acetaldehyde và formaldehyde",
+    "Thực trạng rượu tự chế tại Việt Nam"
+  ],
+  "summary": "Bác sĩ Trần Văn Phúc cảnh báo về nguy cơ ngộ độc rượu giả tại Việt Nam - quốc gia tiêu thụ rượu bia lớn nhất Đông Nam Á với 85% là rượu tự chế. Điểm mấu chốt: methanol và ethanol bản thân không độc, nhưng sản phẩm chuyển hóa của methanol (formaldehyde, axit formic) cực kỳ nguy hiểm cho mắt, thần kinh, tim, gan, thận. Chỉ cần 4ml methanol đã gây ngộ độc, 30ml có thể tử vong. Đáng chú ý, rượu quê và rượu ngâm hoa quả cũng có thể chứa methanol từ pectin hoặc nguyên liệu mốc. Phương pháp giải độc methanol bằng rượu thật (ethanol cạnh tranh enzyme) là khoa học, không phải \"ngu dốt\" như nhiều người nghĩ. Lời khuyên: mua rượu có tem nhãn, uống rượu quê nên kèm bia, và nhận biết sớm dấu hiệu ngộ độc như nhìn mờ, nhìn một thành hai.",
+  "detailed_summary": "Việt Nam đứng thứ 10 thế giới về số vụ ngộ độc rượu giả (22 vụ/năm), là quốc gia tiêu thụ rượu bia lớn nhất Đông Nam Á với 85% lượng rượu là tự chế. Bác sĩ Trần Văn Phúc giải thích cơ chế gây độc: Ethanol (rượu thật) chuyển hóa thành acetaldehyde rồi thành axit axetic, cuối cùng tạo CO2, nước và năng lượng - không độc và đào thải qua nước tiểu. Ngược lại, methanol chuyển hóa thành formaldehyde rồi axit formic - cơ thể không có enzyme chuyển hóa tiếp nên tích tụ gây độc cho mắt, thần kinh trung ương, tim, gan, phổi, thận. Acetaldehyde độc gấp 30 lần ethanol và được xếp vào nhóm gây ung thư 2B. Formaldehyde từng được dùng ngâm xác và cho vào bánh phở. Nguồn methanol không chỉ từ cồn công nghiệp mà còn từ pectin trong hoa quả (táo, nho, dâu) khi thủy phân, hoặc nguyên liệu nấu rượu bị nấm mốc. Nấu rượu trong nồi đồng có oxit đồng cũng tạo acetaldehyde độc hại. Nguyên lý giải độc: khi uống ethanol thật cùng methanol, ethanol cạnh tranh enzyme chuyển hóa trước, methanol không chuyển hóa được sẽ đào thải nguyên bản qua hơi thở, nước tiểu, mồ hôi. Điều trị có thể kéo dài 8-10 ngày, thậm chí 2 tuần. Dấu hiệu ngộ độc methanol cần nhận biết sớm: nhìn một thành hai, nhìn mờ, thấy vệt đen, biến dạng hình ảnh, ảo giác. Nặng hơn: kích thích, nôn mửa, co giật, hôn mê. Tử vong: ngừng hô hấp, ngừng tuần hoàn. Để phòng tránh: mua rượu có tem nhãn tại siêu thị uy tín, khi ngâm rượu hoa quả chọn quả không thối/mốc, dùng bình sứ hoặc thủy tinh, kiểm soát nhiệt độ ủ 25-35°C. Nếu uống rượu quê, nên kèm 1-2 lon bia để cạnh tranh chuyển hóa với methanol nếu có.",
+  "key_points": [
+    "Methanol bản thân không độc, sản phẩm chuyển hóa (formaldehyde, axit formic) mới gây độc",
+    "Chỉ 4ml methanol gây ngộ độc, 10ml ngộ độc nặng, 30ml có thể tử vong",
+    "85% rượu Việt Nam là tự chế, tiềm ẩn nguy cơ chứa methanol",
+    "Rượu quê và rượu ngâm hoa quả có thể chứa methanol từ pectin hoặc nguyên liệu mốc",
+    "Dấu hiệu ngộ độc sớm: nhìn mờ, nhìn một thành hai, thấy vệt đen, biến dạng hình ảnh",
+    "Giải độc methanol bằng ethanol thật là phương pháp khoa học - ethanol cạnh tranh enzyme",
+    "Acetaldehyde độc gấp 30 lần ethanol, thuộc nhóm gây ung thư 2B",
+    "Nấu rượu trong nồi đồng tạo acetaldehyde độc hại do oxit đồng",
+    "Điều trị ngộ độc methanol bằng rượu thật có thể kéo dài 8-10 ngày đến 2 tuần",
+    "Cồn y tế giá rẻ có thể chứa nhiều acetaldehyde hoặc bị pha methanol"
+  ],
+  "health_advice": [
+    "Mua rượu có tem nhãn, sản xuất qua nhà máy, tại cửa hàng và siêu thị uy tín",
+    "Uống rượu quê nên kèm 1-2 lon bia để cạnh tranh chuyển hóa với methanol nếu có",
+    "Khi ngâm rượu hoa quả: chọn quả không thối, không mốc, làm sạch môi trường",
+    "Dùng bình sứ hoặc thủy tinh để ủ rượu, kiểm soát nhiệt độ 25-35°C",
+    "Nếu say rượu, hôm sau đau đầu dữ dội và mắt nhìn mờ - uống thêm bia thật để giải độc",
+    "Nhận biết sớm dấu hiệu ngộ độc: nhìn một thành hai, mờ mắt, ảo giác - đến viện ngay",
+    "Tuyệt đối không lái xe sau khi uống rượu bia"
+  ],
+  "warnings": [
+    "Dấu hiệu ngộ độc methanol: nhìn một thành hai, nhìn mờ, thấy vệt đen, biến dạng hình ảnh, ảo giác",
+    "Ngộ độc nặng: kích thích, nôn mửa, co giật, hôn mê, lú lẫn",
+    "Ngộ độc tử vong: ngừng hô hấp, ngừng tuần hoàn",
+    "Rượu quê, rượu tự nấu, rượu ngâm hoa quả đều có thể chứa methanol và acetaldehyde",
+    "Cồn y tế giá rẻ có thể chứa nhiều acetaldehyde hoặc bị pha methanol",
+    "Người nghiện rượu lâu ngày: viêm gan, gan nhiễm mỡ, thoái hóa gan",
+    "Acetonitril trong thuốc trừ sâu tồn dư trên nguyên liệu nấu rượu gây ngộ độc tương tự xyanua"
+  ],
+  "related_conditions": [
+    "Ngộ độc methanol cấp tính",
+    "Ngộ độc rượu mãn tính",
+    "Viêm gan do rượu",
+    "Gan nhiễm mỡ",
+    "Ung thư gan",
+    "Ung thư đường tiêu hóa",
+    "Tổn thương thần kinh thị giác",
+    "Tổn thương hệ thần kinh trung ương",
+    "Viêm tự miễn (viêm gan, viêm tụy)"
+  ],
+  "mechanisms": [
+    "Ethanol → acetaldehyde → axit axetic → kết hợp coenzyme A → CO2 + nước + ATP (không độc, đào thải qua nước tiểu)",
+    "Methanol → formaldehyde → axit formic (cơ thể không có enzyme chuyển hóa tiếp → tích tụ gây độc)",
+    "Ethanol cạnh tranh enzyme với methanol → methanol không chuyển hóa → đào thải nguyên bản qua hơi thở, nước tiểu, mồ hôi",
+    "Pectin trong hoa quả + enzyme/nhiệt độ cao → thủy phân → methanol",
+    "Oxit đồng (CuO) trong nồi đồng + nhiệt độ → acetaldehyde độc hại"
+  ],
+  "specific_numbers": [
+    "4ml methanol: có dấu hiệu ngộ độc",
+    "10ml methanol: ngộ độc nặng",
+    "30ml methanol: liều tử vong ở người lớn",
+    "Acetaldehyde độc gấp 30 lần so với ethanol",
+    "Nhiệt độ ủ rượu tối ưu: 25-35°C",
+    "Điều trị ngộ độc methanol: 8-10 ngày, có thể đến 2 tuần",
+    "Việt Nam: 22 vụ ngộ độc rượu giả/năm (đứng thứ 10 thế giới)",
+    "85% lượng rượu Việt Nam là rượu tự chế",
+    "Indonesia: 339 vụ/năm, Ấn Độ: 131 vụ/năm, Nga: 117 vụ/năm"
+  ],
+  "protocols": [
+    "Giải độc methanol bằng ethanol: cho bệnh nhân uống/truyền rượu thật để ethanol cạnh tranh enzyme, methanol đào thải nguyên bản qua hơi thở, nước tiểu, mồ hôi - điều trị kéo dài 8-10 ngày đến 2 tuần"
+  ],
+  "myths_debunked": [
+    "SAI: Rượu quê tự nấu an toàn hơn rượu siêu thị → ĐÚNG: Rượu nhà máy phải khử độc chất theo quy định, rượu quê không kiểm soát được",
+    "SAI: Methanol chỉ có trong cồn công nghiệp → ĐÚNG: Rượu quê, rượu hoa quả cũng chứa methanol từ pectin hoặc nguyên liệu mốc",
+    "SAI: Bác sĩ truyền bia vào dạ dày để giải độc là ngu dốt → ĐÚNG: Đây là phương pháp điều trị khoa học - dùng ethanol cạnh tranh với methanol"
+  ],
+  "key_quotes": [
+    "Ở đâu có người Việt Nam thì ở đấy sẽ có rượu lậu và sẽ có rượu giả",
+    "Giải độc rượu giả bằng rượu thật",
+    "Những bệnh nhân mà bác sĩ bắt uống rượu thật sau khi đã bị ngộ độc rượu thì sau này họ sợ đến già không dám uống rượu nữa"
+  ],
   "video_id": "8Y_KVAmv63w",
   "title": "Cuối năm hay nhậu, bác sĩ Trần Văn Phúc cảnh báo về Rượu độc",
   "source_url": "https://www.youtube.com/watch?v=8Y_KVAmv63w",
+  "processed_at": "2026-06-01T06:33:00.046839",
+  "transcript_coverage": 1.0,
+  "quality_score": 1.0,
   "categories": [
     "emergency",
-    "children_health"
-  ],
-  "processed_at": "2026-05-31T15:37:26.430885",
-  "main_topics": [
-    "Ngộ độc rượu Methanol",
-    "Rượu giả và rượu lậu",
-    "Tình hình tiêu thụ rượu tại Việt Nam",
-    "Sự khác biệt giữa Ethanol và Methanol",
-    "Cảnh báo sức khỏe dịp cuối năm"
-  ],
-  "summary": "Video cảnh báo về tình trạng ngộ độc rượu, đặc biệt là rượu giả chứa Methanol, trong dịp cuối năm. Bác sĩ Trần Văn Phúc chia sẻ số liệu đáng báo động: Việt Nam đứng thứ 10 thế giới về số vụ ngộ độc rượu giả, với trung bình 22 vụ/năm. Nguyên nhân chính gây ngộ độc là Methanol (CH3OH) có trong rượu pha cồn công nghiệp, khác với Ethanol (C2H5OH) trong rượu thông thường. Tình trạng rượu lậu, rượu tự nấu không đảm bảo vẫn tồn tại ngay cả ở các nước phát triển có quản lý chặt chẽ. Video nhấn mạnh các vụ ngộ độc tập thể nghiêm trọng xảy ra ở Lào, Ấn Độ và Indonesia, với số tử vong lên đến hàng trăm người. Dịp cuối năm với nhiều bữa tiệc, nhậu nhẹt làm gia tăng nguy cơ.",
-  "key_points": [
-    "Việt Nam nằm trong top 10 quốc gia tiêu thụ rượu bia và có số vụ ngộ độc rượu cao hàng năm.",
-    "Methanol (CH3OH) trong rượu giả là thủ phạm chính gây ngộ độc, dẫn đến tử vong hoặc tổn thương thần kinh, mù lòa.",
-    "Ethanol (C2H5OH) là chất có cồn an toàn hơn, được cơ thể con người tiến hóa để chuyển hóa một phần qua hàng nghìn năm.",
-    "Rượu lậu, rượu tự nấu không rõ nguồn gốc vẫn được buôn bán, thậm chí ở nước ngoài, chủ yếu cho đối tượng nghiện rượu, người nhập cư nghèo.",
-    "Nhiều vụ ngộ độc tập thể nghiêm trọng xảy ra ở Ấn Độ, Indonesia với số ca tử vong lên đến 100-170 người/vụ.",
-    "Gần đây, 6 khách du lịch nước ngoài tử vong tại Lào do ngộ độc rượu Methanol.",
-    "Quan niệm dân gian như uống rượu kèm đồ ăn để đỡ say có thể nguy hiểm nếu rượu chứa Methanol, vì làm chậm phát hiện ngộ độc.",
-    "Các nước phát triển như Đan Mạch, Thụy Điển quản lý rượu rất chặt (kiểm soát tuổi mua) nhưng vẫn tồn tại thị trường rượu lậu.",
-    "Tỷ lệ ngộ độc Methanol cao nhất thế giới được báo cáo ở châu Á, tại các nước nghèo và đang phát triển.",
-    "Dịp cuối năm, lễ tết là thời điểm gia tăng các bữa nhậu và nguy cơ ngộ độc rượu."
-  ],
-  "health_advice": [
-    "Chỉ uống rượu có nguồn gốc, xuất xứ rõ ràng, được sản xuất bởi các thương hiệu uy tín.",
-    "Tuyệt đối không uống rượu tự nấu, rượu pha chế không rõ thành phần, rượu giá rẻ bất thường.",
-    "Nếu nghi ngờ rượu có vấn đề (mùi lạ, vị khác thường), hãy ngừng uống ngay lập tức.",
-    "Khi có dấu hiệu ngộ độc rượu (đau đầu dữ dội, chóng mặt, buồn nôn, mờ mắt, khó thở), cần đưa nạn nhân đến cơ sở y tế NGAY LẬP TỨC, không tự xử lý tại nhà.",
-    "Phụ nữ cần hiểu biết về rượu độc để bảo vệ sức khỏe cho chồng, con, người thân trong gia đình."
-  ],
-  "warnings": [
-    "Rượu giả chứa Methanol có thể gây ngộ độc cấp tính dẫn đến tử vong nhanh chóng, hoặc gây tổn thương vĩnh viễn như mù lòa, tổn thương thần kinh.",
-    "Ngộ độc Methanol KHÔNG được điều trị bằng các biện pháp dân gian. Việc cho uống thêm bia, rượu hay các chất khác có thể làm tình trạng trầm trọng hơn.",
-    "Không có ngưỡng an toàn cho việc uống rượu chứa Methanol. Một lượng nhỏ cũng có thể gây hại.",
-    "Cảnh giác cao độ với rượu trong các bữa tiệc cuối năm, đám cưới, liên hoan không kiểm soát được nguồn gốc rượu."
-  ],
-  "related_conditions": [
-    "Ngộ độc Methanol cấp tính",
-    "Tổn thương thần kinh thị giác (có thể dẫn đến mù)",
-    "Suy gan cấp do ngộ độc",
-    "Suy thận cấp",
-    "Toan chuyển hóa nặng",
-    "Viêm tụy cấp do rượu",
-    "Bệnh gan mãn tính do rượu"
+    "diseases"
   ]
 }

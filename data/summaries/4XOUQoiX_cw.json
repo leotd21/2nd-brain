@@ -1,45 +1,103 @@
 {
+  "main_topics": [
+    "Lý do tim gần như không bị ung thư",
+    "Cấu tạo và chức năng đặc biệt của tim",
+    "Bệnh tim mạch nguy hiểm hơn ung thư",
+    "Cách bảo vệ sức khỏe tim mạch từ sớm",
+    "Các dấu hiệu cảnh báo tim có vấn đề"
+  ],
+  "summary": "Video giải thích tại sao ung thư tim cực kỳ hiếm gặp: tim không có tế bào biểu mô (loại tế bào dễ ung thư nhất), tế bào cơ tim không nhân đôi sau khi sinh, và máu được bơm đi ngay lập tức khiến tế bào ung thư không kịp bám vào. Tuy nhiên, bác sĩ cảnh báo bệnh tim mạch thực tế nguy hiểm hơn ung thư với tỷ lệ tử vong cao hơn. Khảo sát cho thấy 99% người Việt không có trái tim thực sự khỏe mạnh. Video nhấn mạnh việc phòng bệnh từ sớm: trẻ từ 3 tuổi cần khám huyết áp định kỳ, từ 10 tuổi cần xét nghiệm đường huyết. Các yếu tố nguy cơ chính bao gồm ăn mặn (người Việt thuộc nhóm ăn mặn nhất thế giới), hút thuốc, ít vận động. Lời khuyên thực hành: tập aerobic 150 phút/tuần, ăn dưới 5g muối/ngày, leo cầu thang thay thang máy, và khám sức khỏe định kỳ hàng năm.",
+  "detailed_summary": "Video phân tích sâu về lý do ung thư tim cực kỳ hiếm gặp trên thế giới, chỉ có vài ca được báo cáo. Về mặt giải phẫu, tim nằm chính giữa lồng ngực (2/3 nghiêng trái, 1/3 bên phải), nặng khoảng 300g, đập trung bình 72 nhịp/phút và bơm 5 lít máu mỗi phút. Tim có 4 loại tế bào: mô cơ, tế bào liên kết, tế bào thần kinh và tế bào hạch - đặc biệt không có tế bào biểu mô, loại tế bào dễ bị ung thư nhất do tiếp xúc với tác nhân bên ngoài và nhân đôi nhiều.\n\nCơ chế bảo vệ tim khỏi ung thư gồm 3 yếu tố: (1) Tế bào cơ tim không nhân đôi sau khi sinh, số lượng cố định suốt đời - mà ung thư xuất phát từ đột biến gen trong quá trình nhân đôi; (2) Tim không trao đổi chất mãnh liệt như các cơ quan khác; (3) Máu được bơm đi ngay lập tức (1 lít/10 giây) nên tế bào ung thư di căn không kịp bám vào. Ngoài ra, chất độc khi ăn vào phải qua nhiều hàng rào (gan giải độc, thận đào thải, phổi, mồ hôi) trước khi đến tim.\n\nTuy nhiên, bác sĩ nhấn mạnh bệnh tim mạch thực tế nguy hiểm hơn ung thư. Tỷ lệ tử vong do bệnh tim mạch khoảng 300/100.000 dân, trong khi 33-35% ung thư có thể chữa khỏi hoàn toàn. Các bệnh tim mạch nguy hiểm bao gồm: tăng huyết áp, suy tim, nhồi máu cơ tim, bệnh van tim, rung nhĩ/rung thất, loạn nhịp tim. Nhịp tim không đều là tiền đề cho nhiều bệnh nghiêm trọng.\n\nĐáng lo ngại, 99% người Việt không có trái tim thực sự khỏe mạnh. Người Việt thuộc nhóm ăn mặn nhất thế giới - yếu tố nguy cơ hàng đầu. Video khuyến cáo phòng bệnh từ sớm: trẻ dưới 1 tuổi cần bú mẹ ít nhất 1 lần/ngày, trẻ từ 3 tuổi khám huyết áp định kỳ hàng năm, từ 10 tuổi xét nghiệm đường huyết 2 lần/năm. Người lớn cần tập aerobic tối thiểu 150 phút/tuần, ăn dưới 5g muối/ngày, bỏ thuốc lá, và khám sức khỏe định kỳ.",
+  "key_points": [
+    "Tim không có tế bào biểu mô và tế bào cơ tim không nhân đôi - đây là lý do chính tim gần như không bị ung thư",
+    "Bệnh tim mạch có tỷ lệ tử vong cao hơn ung thư (300/100.000 dân), trong khi 33-35% ung thư có thể chữa khỏi",
+    "99% người Việt không có trái tim thực sự khỏe mạnh theo khảo sát của bác sĩ",
+    "Tim đập 100.000 lần/ngày, bơm 5 lít máu/phút - hoạt động liên tục từ ngày thứ 16 của bào thai",
+    "Trẻ từ 3 tuổi đã cần khám huyết áp định kỳ hàng năm, từ 10 tuổi cần xét nghiệm đường huyết",
+    "Leo 2-3 tầng cầu thang đã thở hổn hển là dấu hiệu tim có vấn đề cần khám ngay",
+    "Nhịp tim không đều là tiền đề cho tăng huyết áp, suy tim, nhồi máu cơ tim, tai biến mạch não",
+    "Người Việt thuộc nhóm ăn mặn nhất thế giới - yếu tố nguy cơ hàng đầu cho bệnh tim mạch",
+    "Thuốc lá điện tử nguy hiểm hơn thuốc lá thường đối với sức khỏe tim mạch",
+    "Thiếu canxi và magie gây nhịp tim không đều - cần bổ sung nếu có triệu chứng"
+  ],
+  "health_advice": [
+    "Tập thể dục aerobic (đi bộ, chạy chậm) tối thiểu 150 phút/tuần, chia 3-5 buổi, mỗi buổi không dưới 30 phút",
+    "Giảm muối xuống dưới 5g/ngày (bằng 1 thìa cà phê hoặc nắp chai bia), thay thế bằng thực phẩm chứa kali, giấm, đồ chua",
+    "Leo cầu thang bộ thay vì thang máy để rèn luyện tim hàng ngày",
+    "Khám sức khỏe định kỳ ít nhất 1 lần/năm, đặc biệt nếu gia đình có tiền sử tim mạch",
+    "Bỏ thuốc lá hoàn toàn và tránh hút thuốc thụ động, đặc biệt thuốc lá điện tử",
+    "Bổ sung canxi và magie nếu có nhịp tim không đều",
+    "Cho trẻ dưới 1 tuổi bú mẹ ít nhất 1 lần/ngày để bảo vệ tim mạch",
+    "Đưa trẻ từ 3 tuổi đi khám huyết áp định kỳ hàng năm, từ 10 tuổi xét nghiệm đường huyết 2 lần/năm"
+  ],
+  "warnings": [
+    "Leo 2-3 tầng cầu thang đã thở hổn hển là dấu hiệu tim có vấn đề - cần khám ngay",
+    "Trẻ 4 tuổi thường xuyên chóng mặt, đau đầu, mệt mỏi, ngại vận động cần khám tim mạch khẩn",
+    "Nhịp tim không đều không phải chuyện nhỏ - là tiền đề cho tăng huyết áp, suy tim, nhồi máu cơ tim, tai biến",
+    "Thuốc lá điện tử nguy hiểm hơn thuốc lá thường - không phải giải pháp thay thế an toàn",
+    "Gia đình có tiền sử tim mạch, tăng huyết áp cần theo dõi trẻ từ rất sớm",
+    "Hôn nhân cận huyết (trong làng xã) làm tăng nguy cơ dị tật bẩm sinh và bệnh tim mạch"
+  ],
+  "related_conditions": [
+    "Tăng huyết áp",
+    "Suy tim",
+    "Nhồi máu cơ tim",
+    "Bệnh van tim",
+    "Rung nhĩ, rung thất",
+    "Loạn nhịp tim/ngoại tâm thu",
+    "Tai biến mạch não",
+    "Tiểu đường",
+    "Viêm cơ tim do virus, vi khuẩn",
+    "Ung thư tim (cực hiếm): angiosarcoma, lymphoma, ung thư cơ vân"
+  ],
+  "mechanisms": [
+    "Ung thư xuất phát từ đột biến gen trong quá trình nhân đôi tế bào - tim không nhân đôi tế bào nên gần như không bị ung thư",
+    "Tế bào biểu mô dễ ung thư nhất vì tiếp xúc tác nhân bên ngoài và nhân đôi nhiều - tim không có loại tế bào này",
+    "Máu được tim bơm đi ngay lập tức (1 lít/10 giây) nên tế bào ung thư di căn không kịp bám vào",
+    "Chất độc khi ăn vào phải qua đường tiêu hóa → gan giải độc → thận đào thải → phổi → mồ hôi trước khi đến tim",
+    "Thiếu canxi và magie làm rối loạn dẫn truyền điện trong tim, gây nhịp tim không đều"
+  ],
+  "specific_numbers": [
+    "Tim đập 72 nhịp/phút (trung bình), phụ nữ 78 nhịp/phút, đàn ông 70 nhịp/phút",
+    "Tim đập 100.000 lần/ngày, 2000 tỷ lần/đời",
+    "Tim bơm 1 lít máu/10 giây, 5 lít máu/phút",
+    "Tim nặng khoảng 300g (3 lạng)",
+    "Tập thể dục tối thiểu 150 phút/tuần, 3-5 buổi/tuần, mỗi buổi không dưới 30 phút",
+    "Ăn không quá 5g muối/ngày (bằng 1 thìa cà phê hoặc nắp chai bia)",
+    "Tỷ lệ tử vong bệnh tim mạch: khoảng 300/100.000 dân",
+    "33-35% ung thư có thể chữa khỏi hoàn toàn",
+    "99% người Việt không có trái tim thực sự khỏe mạnh",
+    "Tim hình thành từ ngày thứ 16-17 của bào thai"
+  ],
+  "protocols": [
+    "Trẻ dưới 1 tuổi: bú mẹ ít nhất 1 lần/ngày để bảo vệ tim mạch",
+    "Trẻ từ 3 tuổi: khám huyết áp định kỳ hàng năm",
+    "Trẻ từ 10 tuổi: xét nghiệm đường huyết khi đói 2 lần/năm",
+    "Người lớn: khám sức khỏe định kỳ ít nhất 1 lần/năm",
+    "Tập aerobic: 150 phút/tuần, chia 3-5 buổi, mỗi buổi tối thiểu 30 phút"
+  ],
+  "myths_debunked": [
+    "SAI: Tim nằm bên trái ngực → ĐÚNG: Tim nằm chính giữa lồng ngực, 2/3 nghiêng trái, 1/3 bên phải",
+    "SAI: Ung thư là bệnh đáng sợ nhất → ĐÚNG: Bệnh tim mạch có tỷ lệ tử vong cao hơn và nguy hiểm hơn",
+    "SAI: Nhịp tim không đều không đáng lo → ĐÚNG: Đây là tiền đề cho nhiều bệnh tim mạch nghiêm trọng",
+    "SAI: Chỉ người già mới cần khám huyết áp → ĐÚNG: Trẻ từ 3 tuổi đã cần khám huyết áp định kỳ"
+  ],
+  "key_quotes": [
+    "Người Việt để có trái tim khỏe mạnh thực sự thì không đến 1%, còn lại 99% là những người thực sự không có trái tim khỏe mạnh",
+    "Trái tim ngay từ khi sinh ra nó đã ở vạch đích rồi, chứ không phải ở điểm xuất phát",
+    "Vận động là cách để chúng ta tồn tại, vận động là cách để chúng ta sống"
+  ],
   "video_id": "4XOUQoiX_cw",
   "title": "UNG THƯ TIM: NHỮNG BÀI HỌC QUÝ! #bacsitranvanphucofficial #BacsiTranVanPhucOfficial",
   "source_url": "https://www.youtube.com/watch?v=4XOUQoiX_cw",
+  "processed_at": "2026-05-31T20:49:08.388611",
+  "transcript_coverage": 1.0,
+  "quality_score": 1.0,
   "categories": [
-    "diseases"
-  ],
-  "processed_at": "2026-05-31T15:33:09.679739",
-  "main_topics": [
-    "Ung thư tim hiếm gặp",
-    "Tế bào biểu mô và nguy cơ ung thư",
-    "Cơ chế bảo vệ tự nhiên của tim",
-    "Bài học về sức khỏe tim mạch",
-    "Phòng ngừa bệnh tật từ góc độ y học"
-  ],
-  "summary": "Video thảo luận về ung thư tim - một bệnh lý cực kỳ hiếm gặp. Bác sĩ Trần Văn Phúc giải thích rằng tim gần như miễn dịch với ung thư do hai lý do chính: thứ nhất, tim không có tế bào biểu mô - loại tế bào dễ bị ung thư nhất vì thường xuyên tiếp xúc với tác nhân gây hại từ môi trường. Thứ hai, tế bào cơ tim ổn định ngay từ khi sinh ra, không nhân lên và trao đổi chất mạnh như các tế bào khác, làm giảm nguy cơ đột biến. Dù vậy, ung thư tim vẫn tồn tại nhưng tỷ lệ rất thấp. Qua câu chuyện này, bác sĩ muốn rút ra bài học về việc giữ gìn sức khỏe tim mạch và hiểu rõ cơ chế bảo vệ tự nhiên của cơ thể.",
-  "key_points": [
-    "Ung thư tim là bệnh cực kỳ hiếm gặp, bác sĩ với nhiều năm kinh nghiệm chỉ gặp 2 trường hợp.",
-    "Hầu hết các cơ quan trong cơ thể đều có thể bị ung thư, nhưng tim và lá lách là hai tạng ít bị nhất.",
-    "Tế bào biểu mô (lót bề mặt các cơ quan) dễ bị ung thư do thường xuyên tiếp xúc với tác nhân độc hại.",
-    "Tim không có tế bào biểu mô, đây là cơ chế bảo vệ tự nhiên ngay từ khi sinh ra.",
-    "Tế bào cơ tim ổn định, không nhân lên sau khi sinh, khác với các tế bào khác thường xuyên phân chia.",
-    "Quá trình trao đổi chất mạnh và nhân lên nhanh làm tăng nguy cơ đột biến và ung thư.",
-    "Bài học: Tim 'chiến thắng' ngay từ đầu nhờ cấu trúc hoàn hảo, ít nguy cơ ung thư.",
-    "Cần chú ý các triệu chứng như chóng mặt, đau đầu, mệt mỏi ở trẻ em vì có thể liên quan đến bệnh tim.",
-    "Ung thư tim nếu mắc phải sẽ là thảm họa lớn cho người bệnh.",
-    "Thông qua bệnh hiếm, bác sĩ tích lũy kinh nghiệm để phát hiện sớm và rút ra bài học phòng bệnh."
-  ],
-  "health_advice": [
-    "Hiểu rõ cơ chế bảo vệ tự nhiên của cơ thể để trân trọng và giữ gìn sức khỏe.",
-    "Chú ý theo dõi các triệu chứng bất thường ở trẻ em (chóng mặt, đau đầu, mệt mỏi, ngại vận động) để kịp thời khám tim mạch.",
-    "Duy trì lối sống lành mạnh để hỗ trợ sức khỏe tổng thể, gián tiếp bảo vệ tim.",
-    "Khám sức khỏe định kỳ để phát hiện sớm các vấn đề tiềm ẩn."
-  ],
-  "warnings": [
-    "Mặc dù ung thư tim hiếm, nhưng không có nghĩa là không thể xảy ra.",
-    "Khi mắc ung thư tim, tiên lượng thường rất nặng và là thảm họa với người bệnh.",
-    "Không nên chủ quan với các dấu hiệu bất thường về tim mạch, dù ở lứa tuổi nào."
-  ],
-  "related_conditions": [
-    "Các bệnh ung thư phổ biến khác (ung thư phổi, dạ dày, đại trực tràng, vú)",
-    "Bệnh lý tim mạch nói chung (không phải ung thư)",
-    "Rối loạn liên quan đến tế bào biểu mô"
+    "diseases",
+    "lifestyle",
+    "nutrition",
+    "prevention",
+    "medications"
   ]
 }
